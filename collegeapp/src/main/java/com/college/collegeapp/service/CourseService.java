@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CourseService {
 
-    //name should match the bean name
+    //name should match the bean name, but it is not recommended
     @Autowired
     private CourseRecommender secondCourseRecommender;
 
