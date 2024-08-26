@@ -8,11 +8,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class CourseService {
 
-    private CourseRecommender courseRecommender;
+    private final CourseRecommender courseRecommender;
 
     @Autowired
-    @Qualifier("second")
-    public void setCourseRecommender(CourseRecommender courseRecommender) {
+    public CourseService(@Qualifier("second") CourseRecommender courseRecommender) {
         this.courseRecommender = courseRecommender;
     }
 
