@@ -8,15 +8,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class CourseService {
 
-    private final CourseRecommender courseRecommender;
-
+    //name should match the bean name
     @Autowired
-    public CourseService(@Qualifier("second") CourseRecommender courseRecommender) {
-        this.courseRecommender = courseRecommender;
-    }
+    private CourseRecommender secondCourseRecommender;
 
     public void displayRecommendations() {
-        System.out.println(courseRecommender.recommendCourses());
+        System.out.println(secondCourseRecommender.recommendCourses());
     }
 }
 
