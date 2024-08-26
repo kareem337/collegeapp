@@ -6,6 +6,6 @@ import java.util.List;
 public class FirstCourseRecommender implements CourseRecommender {
     @Override
     public List<String> recommendCourses() {
-        return Arrays.asList("Popular Course 1", "Popular Course 2", "Popular Course 3");
+        return Arrays.asList("First Course 1", "First Course 2", "First Course 3");
     }
 }
