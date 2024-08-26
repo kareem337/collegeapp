@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public class AppConfig {
 
     @Bean
-    @Primary
     public CourseRecommender firstCourseRecommender() {
         return new FirstCourseRecommender();
     }
