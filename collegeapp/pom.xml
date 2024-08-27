@@ -30,6 +30,11 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>com.explicitcollege</groupId>
+			<artifactId>explicitcollegeapp</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -63,7 +68,6 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<version>8.3.0</version>
 		</dependency>
-
 	</dependencies>
 
 
