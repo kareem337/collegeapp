@@ -22,7 +22,7 @@ public class CollegeappApplication {
 		courseService.addCourse(courseAdded);
 		System.out.println("Course added.");
 
-		// View the course (assuming id 1 for demonstration)
+
 		Course course = courseService.viewCourse(1);
 		System.out.println("Course Details: " + course);
 
@@ -32,14 +32,14 @@ public class CollegeappApplication {
 		System.out.println("Course updated.");
 
 		// View the updated course
-		course = courseService.viewCourse(20);
+		course = courseService.viewCourse(22);
 		System.out.println("Updated Course Details: " + course);
 
 
 		courseService.deleteCourse(21);
 		System.out.println("Course deleted.");
 
-		// Try to view the deleted course
+
 		try {
 			course = courseService.viewCourse(21);
 			System.out.println("Course Details after Deletion: " + course);
