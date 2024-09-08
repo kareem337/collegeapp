@@ -18,25 +18,23 @@ public class CollegeappApplication {
 	}
 	private static void testCrudOperations(CourseService courseService) {
 
-		Course courseAdded = new Course(98,"jdbc","Intro to JDBC",3,1);
+		Course courseAdded = new Course(98,"jdbc","Intro to JDBC",3);
 		courseService.addCourse(courseAdded);
 		System.out.println("Course added.");
 
 
-		Course course = courseService.viewCourse(1);
+		Course course = courseService.viewCourse(152);
 		System.out.println("Course Details: " + course);
 
 
-		Course courseUpdated = new Course(22,"Updated JDBC","Intro to JDBC",3,1);
+		Course courseUpdated = new Course(154,"Updated JDBC","Intro to JDBC",3);
 		courseService.updateCourse(courseUpdated);
 		System.out.println("Course updated.");
 
-		// View the updated course
-		course = courseService.viewCourse(22);
-		System.out.println("Updated Course Details: " + course);
 
 
-		courseService.deleteCourse(21);
+
+		courseService.deleteCourse(154);
 		System.out.println("Course deleted.");
 
 

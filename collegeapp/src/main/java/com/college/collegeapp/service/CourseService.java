@@ -17,13 +17,13 @@ public class CourseService {
     }
 
     public void addCourse(Course course) {
-        String sql = "INSERT INTO course (name, description, credit, author_id) VALUES (?, ?, ?, ?)";
-        jdbcTemplate.update(sql, course.getName(), course.getDescription(), course.getCredit(), course.getAuthor_id());
+        String sql = "INSERT INTO course (name, description, credit) VALUES (?, ?, ?)";
+        jdbcTemplate.update(sql, course.getName(), course.getDescription(), course.getCredit());
     }
 
     public void updateCourse(Course course) {
-        String sql = "UPDATE course SET name=?, description=?, credit=?, author_id=? WHERE course_id=?";
-        jdbcTemplate.update(sql, course.getName(), course.getDescription(), course.getCredit(), course.getAuthor_id(), course.getCourse_id());
+        String sql = "UPDATE course SET name=?, description=?, credit=? WHERE course_id=?";
+        jdbcTemplate.update(sql, course.getName(), course.getDescription(), course.getCredit(), course.getCourse_id());
     }
 
 
@@ -34,8 +34,8 @@ public class CourseService {
                         rs.getInt("course_id"),
                         rs.getString("name"),
                         rs.getString("description"),
-                        rs.getInt("credit"),
-                        rs.getInt("author_id")
+                        rs.getInt("credit")
+
                 )
         );
     }

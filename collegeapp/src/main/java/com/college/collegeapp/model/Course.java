@@ -5,16 +5,16 @@ public class Course {
     private String name;
     private String description;
 
-    public Course(int course_id,String name, String description, int credit, int author_id) {
+    public Course(int course_id,String name, String description, int credit) {
         this.course_id = course_id;
         this.name = name;
         this.description = description;
         this.credit = credit;
-        this.author_id = author_id;
+
     }
 
     private int credit;
-    private int author_id;
+
 
     public int getCourse_id() {
         return course_id;
@@ -48,12 +48,5 @@ public class Course {
         this.description = description;
     }
 
-    public int getAuthor_id() {
-        return author_id;
-    }
-
-    public void setAuthor_id(int author_id) {
-        this.author_id = author_id;
-    }
 }
 
